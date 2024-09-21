@@ -1,6 +1,10 @@
+let clickCounter = 0;
 
 document.getElementById('interactiveButton').addEventListener('click', function() {
     this.style.backgroundColor = this.style.backgroundColor === 'red' ? '#007BFF' : 'red';
     const message = document.getElementById('message');
     message.classList.toggle('hidden');
+    
+    clickCounter++;
+    document.getElementById('clickCount').textContent = `Cliques: ${clickCounter}`;
 });
