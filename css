@@ -5,6 +5,11 @@ body {
     height: 100vh;
     background-color: #f0f0f0;
     margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
 }
 
 button {
@@ -15,9 +20,31 @@ button {
     border-radius: 5px;
     background-color: #007BFF;
     color: white;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:active {
     background-color: #0056b3;
+    transform: scale(0.95);
 }
+
+.hidden {
+    display: none;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
